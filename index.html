@@ -8,24 +8,24 @@
   </head>
 
   <body
-    class="min-h-screen bg-gradient-to-br from-blue-500 via-sky-400 to-cyan-300 flex items-center justify-center p-5"
+    class="min-h-screen bg-gradient-to-br from-blue-500 via-sky-400 to-cyan-300 flex items-center justify-center p-4"
   >
     <div
-      class="bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-3xl w-full max-w-md p-6 text-white"
+      class="bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-3xl w-full max-w-sm p-5 text-white"
     >
       <h1 class="text-3xl font-bold text-center mb-6">Weather App</h1>
 
-      <div class="flex gap-3 mb-8">
+      <div class="flex gap-2 mb-6 w-full">
         <input
           id="searchInput"
           type="text"
           placeholder="Enter city name..."
-          class="flex-1 px-4 py-3 rounded-xl outline-none text-black placeholder-gray-500"
+          class="flex-1 min-w-0 px-4 py-3 rounded-xl outline-none text-black placeholder-gray-500"
         />
 
         <button
           id="searchBtn"
-          class="bg-white text-blue-600 font-semibold px-5 rounded-xl hover:bg-blue-100 transition"
+          class="bg-white text-blue-600 font-semibold px-4 sm:px-5 py-3 rounded-xl hover:bg-blue-100 transition shrink-0"
         >
           Search
         </button>
@@ -36,24 +36,32 @@
           id="weatherIcon"
           src=""
           alt="weather icon"
-          class="w-24 mx-auto mb-4"
+          class="w-20 mx-auto mb-2"
         />
 
-        <h2 id="cityName" class="text-3xl font-bold mb-2"></h2>
+        <h2 id="cityName" class="text-3xl font-bold mb-2 break-words"></h2>
 
-        <p id="temperature" class="text-5xl font-extrabold mb-3"></p>
+        <p id="temperature" class="text-4xl font-extrabold mb-2"></p>
 
-        <p id="condition" class="text-xl mb-6"></p>
+        <p id="condition" class="text-lg mb-5"></p>
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-3">
           <div class="bg-white/20 rounded-2xl p-4 shadow-lg backdrop-blur-md">
-            <p class="text-lg font-semibold">Humidity</p>
-            <p id="humidity" class="text-2xl font-bold mt-1"></p>
+            <p class="text-sm sm:text-base font-semibold">Humidity</p>
+
+            <p
+              id="humidity"
+              class="text-xl sm:text-2xl font-bold mt-2 break-words"
+            ></p>
           </div>
 
           <div class="bg-white/20 rounded-2xl p-4 shadow-lg backdrop-blur-md">
-            <p class="text-lg font-semibold">Wind Speed</p>
-            <p id="windSpeed" class="text-2xl font-bold mt-1"></p>
+            <p class="text-sm sm:text-base font-semibold">Wind Speed</p>
+
+            <p
+              id="windSpeed"
+              class="text-xl sm:text-2xl font-bold mt-2 break-words"
+            ></p>
           </div>
         </div>
       </div>
